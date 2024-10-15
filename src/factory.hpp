@@ -1,8 +1,8 @@
 #ifndef BUTTER_BUILDER_FACTORY_HPP
 #define BUTTER_BUILDER_FACTORY_HPP
 
-#include "./builder/definitions/table.hpp"
-#include "./builder/definitions/type.hpp"
+#include "./builder/ddl/table.hpp"
+#include "./builder/ddl/type.hpp"
 
 namespace Butter::Factory {
 
@@ -16,23 +16,23 @@ namespace Butter::Factory {
 
 	class TypeFactory {
 		public:
-			Builder::Database::EnumTypeBuilder createEnum(std::string name) {
-				return Builder::Database::EnumTypeBuilder(name);
+			Builder::DDL::EnumTypeBuilder createEnum(std::string name) {
+				return Builder::DDL::EnumTypeBuilder(name);
 			};
 
-			Builder::Database::CompositeTypeBuilder createComposite(std::string name) {
-				return Builder::Database::CompositeTypeBuilder(name);
+			Builder::DDL::CompositeTypeBuilder createComposite(std::string name) {
+				return Builder::DDL::CompositeTypeBuilder(name);
 			};
 	};
 	
 	class DatabaseDefinitionFactory {
 		public:
-			Builder::Database::TableColumnBuilder *createColumn(std::string name, std::string type) {
-				return new Builder::Database::TableColumnBuilder(name, type);
+			Builder::DDL::TableColumnBuilder *createColumn(std::string name, std::string type) {
+				return new Builder::DDL::TableColumnBuilder(name, type);
 			};
 			
-			Builder::Database::TableBuilder createTable(std::string name) {
-				return Builder::Database::TableBuilder(name);
+			Builder::DDL::TableBuilder createTable(std::string name) {
+				return Builder::DDL::TableBuilder(name);
 			};
 
 			TypeFactory types() {

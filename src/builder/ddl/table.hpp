@@ -1,5 +1,5 @@
-#ifndef BUTTER_DATABASE_DEFINITION_TABLE_BUILDER
-#define BUTTER_DATABASE_DEFINITION_TABLE_BUILDER
+#ifndef BUTTER_DDL_TABLE_BUILDER
+#define BUTTER_DDL_TABLE_BUILDER
 
 #include "../../common/node.hpp"
 #include "../../common/util.hpp"
@@ -10,7 +10,7 @@
 #include <variant>
 #include <vector>
 
-namespace Butter::Builder::Database {
+namespace Butter::Builder::DDL {
 
   // May implement IF its needed for quality of life.
   // enum ColumnDataType {

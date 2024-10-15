@@ -1,12 +1,12 @@
-#ifndef BUTTER_DATABASE_DEFINITION_TYPE_BUILDER
-#define BUTTER_DATABASE_DEFINITION_TYPE_BUILDER
+#ifndef BUTTER_DDL_TYPE_BUILDER
+#define BUTTER_DDL_TYPE_BUILDER
 
 #include "../../common/node.hpp"
 #include "../../common/util.hpp"
 #include <sstream>
 #include <vector>
 
-namespace Butter::Builder::Database {
+namespace Butter::Builder::DDL {
   class EnumTypeBuilder {
     private:
       std::string name;
